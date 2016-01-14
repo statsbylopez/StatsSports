@@ -1,13 +1,13 @@
 # Homework 0: Sports and Statistics
 
-1. Download [R](https://cran.r-project.org/) and [RStudio](https://www.rstudio.com/products/RStudio/#Desktop). Next, print and refer to this 
+### Step 1: Download [R](https://cran.r-project.org/) and [RStudio](https://www.rstudio.com/products/RStudio/#Desktop). Next, print and refer to this 
 [RMarkdown cheatsheet](http://shiny.rstudio.com/articles/rm-cheatsheet.html). 
 
-2. Create a new Markdown file by going to -- `File` -- `New file` -- `RMarkdown` and selecting `HTML`.
+### Step 2: Create a new Markdown file by going to -- `File` -- `New file` -- `RMarkdown` and selecting `HTML`.
 
-3. Save the file as `Homework 0.`
+### Step 3: Save the file as `Homework 0.`
 
-4. Answer the following questions. At the end of your assignment, click `Knit HTML` at the top of RStudio, and print the resulting document. $Note$: I do not want a printed homework assignment with your handwriting on it!!!
+### Step 4: Answer the following questions. At the end of your assignment, click `Knit HTML` at the top of RStudio, and print the resulting document. $Note$: I do not want a printed homework assignment with your handwriting on it!!!
 
 
 ### Q1: What math or stats classes have you taken while at college? 
