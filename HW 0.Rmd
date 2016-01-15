@@ -11,14 +11,14 @@ Create a new Markdown file by going to -- `File` -- `New file` -- `RMarkdown` an
 
 ### Step 3: 
 
-Save the file as `Homework 0.`
+Save the file as `Homework 0,` and make sure to enter your name where it says `Author.`
 
 ### Step 4: 
 
 Answer the following questions. At the end of your assignment, click `Knit HTML` at the top of RStudio, and print the resulting document. *Note*: I do not want a printed homework assignment with your handwriting on it!!!
 
 
-### Q1: What math or stats classes have you taken while at college? 
+### Q1: What math or stats classes have you taken while at college?  What experience do you have using R or RStudio?
 
 Answer here:
 
