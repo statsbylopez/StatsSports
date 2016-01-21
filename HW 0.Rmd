@@ -28,10 +28,10 @@ Answer here:
 Answer here:
 
 
-### Q3: There are some excellent Markdown resources. In addition to the 
+There are some excellent Markdown resources. In addition to the 
 [RMarkdown cheatsheet](http://shiny.rstudio.com/articles/rm-cheatsheet.html), check out the work of Professor [Jenny Bryan](https://stat545-ubc.github.io/index.html), which includes [tips for first-time R users](https://stat545-ubc.github.io/block002_hello-r-workspace-wd-project.html), [basic data manipulation steps](https://stat545-ubc.github.io/block006_care-feeding-data.html), and [different R objects](https://stat545-ubc.github.io/block004_basic-r-objects.html)
 
-Using this information, write five things about the R software that you did not know beforehand. 
+### Q3: Using this information, write five things about the R software that you did not know beforehand. 
 
 Answer here:
 
