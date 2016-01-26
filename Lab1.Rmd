@@ -1,11 +1,5 @@
 ---
 title: "Introduction to R and RStudio using baseball stats"
-output:
-  pdf_document: default
-  html_document:
-    css: ../lab.css
-    highlight: pygments
-    theme: cerulean
 author: Michael Lopez
 ---
 
