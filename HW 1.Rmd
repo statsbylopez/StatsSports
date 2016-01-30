@@ -1,6 +1,6 @@
 ---
-title: "HW 1 solutions"
-author: "Stat 371"
+title: "HW 1"
+author: Your name here
 output: html_document
 ---
 
