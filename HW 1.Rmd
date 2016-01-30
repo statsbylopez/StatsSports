@@ -16,6 +16,15 @@ For this lab, we will be using the `mlb11` data set, as per Lab 1. Please submit
 
 Write code to upload the `mlb11` data set into `R`, and print the first 6 rows of the data set.
 
+```{r}
+#Your code goes here
+
+```
+
+
+
+
+
 ## Question 2
 
 What element of the `mlb11` data set corresponds to the 10th row and 6th column? What team and variable is referred to in this cell?
