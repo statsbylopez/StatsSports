@@ -14,7 +14,7 @@ For this lab, we will be using the `mlb11` data set, as per Lab 1. Please submit
 
 ## Question 1
 
-Write code to upload the `mlb11` data set into `R`, and show the first 6 rows of the data set.
+Write code to upload the `mlb11` data set into `R`, and print the first 6 rows of the data set.
 
 ## Question 2
 
