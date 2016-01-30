@@ -1,0 +1,49 @@
+---
+title: "HW 1 solutions"
+author: "Stat 371"
+output: html_document
+---
+
+```{r knitr_options , include=FALSE}
+#Here's some preamble, which makes ensures your figures aren't too big
+knitr::opts_chunk$set(fig.width=6, fig.height=3.6, warning=FALSE,
+message=FALSE)
+```
+
+For this lab, we will be using the `mlb11` data set, as per Lab 1. Please submit a completed HTML file, due at the beginning of class. 
+
+## Question 1
+
+Write the code do upload the data into `R` and show the first 6 rows of the data set.
+
+## Question 2
+
+What element of the `mlb11` data set corresponds to the 10th row and 6th column? What team and variable is referred to in this cell?
+
+## Question 3
+
+Describe the distribution of on at bats (`at_bats`) by considering its center, shape, and spread. Back up your claims by identifying the mean, median, standard deviation and interquartile range of this variable.
+
+## Question 4
+
+A coach is curious if stealing more bases is linked with more home runs. Make and describe a scatter plot of team home runs versus stolen bases. Then, add a title to your plot.
+
+## Question 5.
+
+Create a new variable, `AboveAveWins`, representing whether or not the team won more than half of its games (there are 162 games in a season).  How many teams won 82 games or more?
+
+## Question 6. 
+
+You can create separate scatter plots within groups using the code below.
+
+```{r}
+xyplot(homeruns ~ stolen_bases | AboveAveWins, data = mlb11)
+```
+
+Does the association between home runs and stolen bases differ within the groups of `AboveAveWins`?
+
+## Question 7. 
+
+Make both a histogram and a boxplot of `hits`. What features are apparent in the histogram that aren't apparent in the boxplot? What features are apparent in the boxplot that aren't apparent in the histogram?
+
+
