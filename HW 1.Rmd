@@ -14,7 +14,7 @@ For this lab, we will be using the `mlb11` data set, as per Lab 1. Please submit
 
 ## Question 1
 
-Write the code do upload the data into `R` and show the first 6 rows of the data set.
+Write code to upload the `mlb11` data set into `R`, and show the first 6 rows of the data set.
 
 ## Question 2
 
@@ -22,7 +22,7 @@ What element of the `mlb11` data set corresponds to the 10th row and 6th column?
 
 ## Question 3
 
-Describe the distribution of on at bats (`at_bats`) by considering its center, shape, and spread. Back up your claims by identifying the mean, median, standard deviation and interquartile range of this variable.
+Describe the distribution of at-bats (`at_bats`) by considering its center, shape, and spread. Back up your claims by identifying the mean, median, standard deviation and interquartile range of this variable.
 
 ## Question 4
 
