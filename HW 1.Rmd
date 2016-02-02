@@ -8,6 +8,7 @@ output: html_document
 #Here's some preamble, which makes ensures your figures aren't too big
 knitr::opts_chunk$set(fig.width=6, fig.height=3.6, warning=FALSE,
 message=FALSE)
+library(mosaic)
 ```
 
 For this lab, we will be using the `mlb11` data set, as per Lab 1. Please submit a completed HTML file, due at the beginning of class. 
