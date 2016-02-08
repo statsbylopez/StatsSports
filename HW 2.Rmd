@@ -1,0 +1,62 @@
+---
+title: "HW 2"
+author: Your name here
+output: html_document
+---
+
+```{r knitr_options , include=FALSE}
+#Here's some preamble, which makes ensures your figures aren't too big
+knitr::opts_chunk$set(fig.width=6, fig.height=3.6, warning=FALSE,
+message=FALSE)
+library(mosaic)
+library(Lahman)
+data(Teams)
+data(Pitching)
+```
+
+For this lab, we will be using data provided in the `Lahman` package. 
+
+## Question 1
+
+Let's use the `Teams` data set (recall: to load this data set from the Lahman package, run the command `data(Teams)`). Using every season since 1970, fit a multiple regression model of runs as a function of singles, doubles, triples, home runs, and walks. (recall: you have to create the singles variable. See Lab 2.) Showing the code output is sufficient for this question.
+
+```{r}
+#Your code goes here
+```
+
+
+## Question 2
+
+Refer to the fit in question 1. Identify the y-intercept, as well as the slopes for singles, doubles, triples, home runs and walks (do not interpret).
+
+
+
+## Question 3
+
+Refer to the fit in question 1. Interpret the slope coefficient estimate for triples.
+
+
+
+## Question 4
+
+Use the fit in question 1 to generate a set of predicted runs scored for each team in your data set. 
+
+What is the correlation between your predicted runs and the number of actual runs? How does this compare to the correlation between created runs and actual runs that we found in Lab 2?
+
+
+## Question 6
+
+Using the output from Question 1, discuss the relative importance of each type of productive at bat (singles, doubles, triples, home runs, walks) with respect to run generation. Does anything surprise you?
+
+
+## Question 7
+
+Pick another variable in the `Teams` data set, and add it to your regression model. Interpret it's slope.  Also, does this new variable appear to be significantly associated with runs scored, given the other variables in the model?
+
+
+
+## Question 8
+
+Bonus: Go to the lecture on Thursday night featuring Dan Turkenkopf, Director of Research for the Milwaukee Brewers. 
+
+
