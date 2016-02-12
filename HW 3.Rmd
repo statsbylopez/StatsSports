@@ -1,0 +1,129 @@
+---
+title: "HW 3"
+author: "Your name here"
+output: pdf_document
+---
+
+```{r knitr_options , include=FALSE}
+#Here's some preamble, which makes ensures your figures aren't too big
+knitr::opts_chunk$set(fig.width=6, fig.height=3.6, warning=FALSE,
+message=FALSE)
+library(mosaic)
+library(Lahman)
+library(corrplot)
+data(Teams)
+data(Pitching)
+data(Batting)
+```
+
+For this homework, we will be using data provided in the `Lahman` package. 
+
+# Part 1
+
+
+Our first goal is to use variables in the `Teams` data set to identify the model that best fits the number of runs scored for a team in a single season. We'll use all seasons since 1970. Several models are proposed. 
+
+```{r, eval = FALSE}
+Teams.1 <- filter(Teams, yearID >=1970)
+Teams.1 <- mutate(Teams.1, X1B = H - X2B - X3B - HR)
+
+fit.1 <- lm(R ~ X1B + X2B + X3B + HR, data = Teams.1)
+fit.2 <- lm(R ~ X1B + X2B + X3B + HR + BB, data = Teams.1)
+fit.3 <- lm(R ~ X1B + X2B + X3B + HR + BB + SO, data = Teams.1)
+fit.4 <- lm(R ~ X1B + X2B + X3B + HR + BB + SO + CS, data = Teams.1)
+fit.5 <- lm(R ~ X1B + X2B + X3B + HR + BB + SO + CS + lgID, data = Teams.1)
+fit.6 <- lm(R ~ X1B + X2B + X3B + HR + BB + SO + CS + lgID + SB, data = Teams.1)
+
+options(scipen=999)
+```
+
+Note: The `options(scipen = 999)` command disables R's scientific notation.
+
+## Question 1
+
+Using the AIC criteria, which of the six models would you recommend for measuring runs against on a team-wide level?  From a baseball perspective, what does your choice suggest about certain measurements as far as their link to runs scored?
+
+
+## Question 2
+
+One of the coefficients in `fit.5` and `fit.6` is `lgID`. Generate a table of the `lgID` in your data set. What does this variable refer to?
+
+
+## Question 3
+
+Using the code below, the coefficient for `league = "NL"` is negative. Interpret this coefficient. What about baseball's rules make it important to consider which league each team played in? Note: you can google the differences between the American League and the National League to guide you.
+
+```{r, eval = FALSE}
+summary(fit.5)
+```
+
+
+## Question 4
+
+Interpret the R-squared from `fit.5`, and produce model checks to determine if the assumptions for linear regression are appropriate. 
+
+
+## Question 5
+
+The first team in the data set is the Atlanta Braves, who scored 736 runs in 1971. Using `fit.5`, estimate how many runs your model expected the Braves to score. Did the Braves outperform expectations (score more runs) or underperform expectations (score fewer runs)? 
+
+
+# Part II
+
+In this part, we'll use the `Hitting` data set, and explore the properties of runs created. In this code, we look at three formulas for runs created: `RC1`, `RC2`, and `RC3`. 
+
+```{r, eval = FALSE}
+Batting.1 <- Batting %>% 
+ filter(yearID >=1971, AB > 500) %>%
+ mutate(X1B = H - X2B - X3B - HR, 
+        TB = X1B + 2*X2B + 3*X3B + 4*HR, 
+        RC1 = (H + BB)*TB/(AB + BB),
+        RC2 = (H + BB - CS)*(TB + (0.55*SB))/(AB+BB),
+        RC3 = ((H + BB - CS + HBP - GIDP)*(TB + (0.26*(BB - IBB + HBP))) + 
+          (0.52*(SH+SF+SB)))/(AB+BB+HBP+SH+SF))
+
+Batting.2 <- Batting.1 %>%
+  arrange(playerID, yearID) %>%
+  group_by(playerID) %>%
+  mutate(f.RC1 = lead(RC1), f.RC2 = lead(RC2), f.RC3 = lead(RC3)) %>%
+  na.omit()
+
+cor.matrix <- cor(select(ungroup(Batting.2), 
+    f.RC1, f.RC2, f.RC3, RC1, RC2, RC3), 
+    use="pairwise.complete.obs")
+corrplot(cor.matrix, method = "number")
+
+```
+
+## Question 6
+
+Which of the three runs created metrics more strongly correlates with its own future performance in the following year?  Is that a good thing or a bad thing?
+
+
+## Question 7
+
+Which of the three runs created metrics more strongly correlates with `f.RC1`? What does this suggest?
+
+
+## Question 8
+
+Make a pair of scatter plots: `f.RC1` versus `RC1`, and `f.RC3` versus `RC3`. Is the difference in correlations between each pair of variables obvious in the scatter plots?
+
+## Question 9
+
+In place of correlation, a useful tool for measuring predictive accuracy is root mean squared error (MAE). In R, the MAE between two variables of the same length can be calculated as follows:
+
+```{r, eval = FALSE}
+x <- c(6, 10, 10)
+y <- c(10, 10, 8)
+MAE <- mean(abs(x-y))
+MAE
+```
+
+Calculate the MAE between between each of the following three variable pairs: `RC1` and `f.RC1`, `RC2` and `f.RC2`, and `RC3` and `f.RC3`.
+
+## Question 10
+
+Interpret the MAE between `RC1` and `f.RC1`. Is there a noticeable difference between your MAE's found in question 9?  What does this suggest about the more complicated `RC3` formula?
+
+
