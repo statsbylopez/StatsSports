@@ -4,15 +4,15 @@ There are a wide variety of public data sets or R packages available for anyone 
 
 ### Baseball
 
-The (Lahman)[https://cran.r-project.org/web/packages/Lahman/Lahman.pdf) package in R is a great resource for historical statistics. There are 24 data sets with team, individual, manager, all-star, and hall-of-fame information in them. For more info, see this [link](http://lahman.r-forge.r-project.org/). If you don't use R, you can access the raw data [here](http://www.seanlahman.com/baseball-archive/statistics/).
+The [Lahman](https://cran.r-project.org/web/packages/Lahman/Lahman.pdf) package in R is a great resource for historical statistics. There are 24 data sets with team, individual, manager, all-star, and hall-of-fame information in them. For more info, see this [link](http://lahman.r-forge.r-project.org/). If you don't use R, you can access the raw data [here](http://www.seanlahman.com/baseball-archive/statistics/).
 
-The (PitchFX)[http://cpsievert.github.io/pitchRx/] contains location data for MLB pitches from roughly the past decade. Dan Brooks' [site](http://www.brooksbaseball.net/) also has valuable XY data, produced immediately. 
+The [PitchFX](http://cpsievert.github.io/pitchRx/) contains location data for MLB pitches from roughly the past decade. Dan Brooks' [site](http://www.brooksbaseball.net/) also has valuable XY data, produced immediately. 
 
-Bill Petti is working on a baseball package in R that is promising. See his github page [here](https://github.com/BillPetti/baseballr)
+Bill Petti is working on a baseball package in R that is promising. See his github page [here](https://github.com/BillPetti/baseballr). The focus is on the more recent baseball methodology. 
 
 The [BaseballwithR book](http://www.amazon.com/Analyzing-Baseball-Data-Chapman-Series/dp/1466570229) and [webpage](https://baseballwithr.wordpress.com) provide lots of walkthroughs of historically important baseball examples. 
 
-[Retrosheet](http://www.retrosheet.org/) 
+[Retrosheet](http://www.retrosheet.org/) has box-scores dating back to the 1800's, although I don't have any experience getting this information into R. 
 
 
 ### Football
