@@ -65,7 +65,7 @@ Interpret the R-squared from `fit.5`, and produce model checks to determine if t
 
 ## Question 5
 
-The first team in the data set is the Atlanta Braves, who scored 736 runs in 1971. Using `fit.5`, estimate how many runs your model expected the Braves to score. Did the Braves outperform expectations (score more runs) or underperform expectations (score fewer runs)? 
+The first team in the data set is the Atlanta Braves, who scored 736 runs in 1970. Using `fit.5`, estimate how many runs your model expected the Braves to score. Did the Braves outperform expectations (score more runs) or underperform expectations (score fewer runs)? 
 
 
 # Part II
