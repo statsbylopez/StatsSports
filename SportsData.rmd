@@ -24,7 +24,7 @@ I usually recommend the sports-reference sites ([find several here](http://www.s
 
 - [Retrosheet](http://www.retrosheet.org/) has box-scores dating back to the 1800's, although I don't have any experience getting this information into R. 
 
-- Darren at [Baseball Savant](www.baseballsavant) has some great pitch-level, searchable data. I used it for my umpire piece [here](http://fivethirtyeight.com/features/umpires-are-less-blind-than-they-used-to-be/)
+- Darren at [Baseball Savant](www.baseballsavant) has some great pitch-level, searchable data. I used it for my umpire piece [here](http://fivethirtyeight.com/features/umpires-are-less-blind-than-they-used-to-be/), and found the ump-level search information quite interesting.
 
 - Ben, Greg, and Shane wrote a statistical paper on [wins above replacement](http://arxiv.org/abs/1312.7158), and their R [package](https://github.com/beanumber/openWAR) and [tutorial](https://baseballwithr.wordpress.com/2014/03/17/introduction-to-openwar/) are worth a read, particularly among those ready for more advanced analyses. Jim Albert's [tutorials](https://baseballwithr.wordpress.com/category/openwar/) will help you along. (**Rstats**)
 
