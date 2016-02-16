@@ -4,7 +4,7 @@ There are a wide variety of public data sets or R packages available for anyone 
 
 ### All sports
 
-I usually recommend the sports-reference sites ([find several here])(http://www.sports-reference.com/) for any aggregated team or individual level data. A great starting point. 
+I usually recommend the sports-reference sites ([find several here](http://www.sports-reference.com/)) for any aggregated team or individual level data. A great starting point. 
 
 
 ### Baseball
