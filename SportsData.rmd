@@ -1,6 +1,6 @@
 ## Sports Data
 
-There are a wide variety of public data sets or R packages available for anyone looking to do statistics and sports research. This working list is designed to provide teachers, professionals, and students one guide to what's out there. I'll be adding items throughout my semester of teaching [Sports and Stats](statsbylopez.com/stats-sports-class/), so feel free to check back. Also, this list is meant to provide raw data, either cleaned or uncleaned, and so I won't be linking to site's that have focused more on the analysis piece. Sites with an (**Rstats**) are tutorials or packages designed fort the [R](cran.r-project.org) statistical software. 
+There are a wide variety of public data sets or R packages available for anyone looking to do statistics and sports research. This working list is designed to provide teachers, professionals, and students one guide to what's out there. I'll be adding items throughout my semester of teaching [Sports and Stats](statsbylopez.com/stats-sports-class/), so feel free to check back. Also, this list is meant to provide raw data, either cleaned or uncleaned, and so I won't be linking to site's that have focused more on the analysis piece. Sites with an **Rstats** label are tutorials or packages designed fort the [R](cran.r-project.org) statistical software. 
 
 
 ### All sports
