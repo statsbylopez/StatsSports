@@ -1,20 +1,38 @@
 ## Sports Data
 
-There are a wide variety of public data sets or R packages available for anyone looking to do statistics and sports research. This working list is designed to provide teachers, professionals, and students one guide to what's out there. I'll be adding items throughout my semester of teaching [Sports and Stats](statsbylopez.com/stats-sports-class/). 
+There are a wide variety of public data sets or R packages available for anyone looking to do statistics and sports research. This working list is designed to provide teachers, professionals, and students one guide to what's out there. I'll be adding items throughout my semester of teaching [Sports and Stats](statsbylopez.com/stats-sports-class/), so feel free to check back. Also, this list is meant to provide raw data, either cleaned or uncleaned, and so I won't be linking to site's that have focused more on the analysis piece.
+
+### All sports
+
+I usually recommend the sports-reference sites [find several here](http://www.sports-reference.com/) for any aggregated team or individual level data. A great starting point. 
+
 
 ### Baseball
 
-The [Lahman](https://cran.r-project.org/web/packages/Lahman/Lahman.pdf) package in R is a great resource for historical statistics. There are 24 data sets with team, individual, manager, all-star, and hall-of-fame information in them. For more info, see this [link](http://lahman.r-forge.r-project.org/). If you don't use R, you can access the raw data [here](http://www.seanlahman.com/baseball-archive/statistics/).
+- The [Lahman](https://cran.r-project.org/web/packages/Lahman/Lahman.pdf) package in R is a great resource for historical statistics. There are 24 data sets with team, individual, manager, all-star, and hall-of-fame information in them. For more info, see this [link](http://lahman.r-forge.r-project.org/). If you don't use R, you can access the raw data [here](http://www.seanlahman.com/baseball-archive/statistics/).
 
-The [PitchFX](http://cpsievert.github.io/pitchRx/) contains location data for MLB pitches from roughly the past decade. Dan Brooks' [site](http://www.brooksbaseball.net/) also has valuable XY data, produced immediately. 
+- The [PitchFX](http://cpsievert.github.io/pitchRx/) contains location data for MLB pitches from roughly the past decade. Dan Brooks' [site](http://www.brooksbaseball.net/) also has valuable XY data, produced almost instantanously. 
 
-Bill Petti is working on a baseball package in R that is promising. See his github page [here](https://github.com/BillPetti/baseballr). The focus is on the more recent baseball methodology. 
+- Bill Petti is working on a baseball package in R that is promising. See his github page [here](https://github.com/BillPetti/baseballr). The focus is on the more recent baseball methodology. 
 
-The [BaseballwithR book](http://www.amazon.com/Analyzing-Baseball-Data-Chapman-Series/dp/1466570229) and [webpage](https://baseballwithr.wordpress.com) provide lots of walkthroughs of historically important baseball examples. 
+- The [BaseballwithR book](http://www.amazon.com/Analyzing-Baseball-Data-Chapman-Series/dp/1466570229) and [webpage](https://baseballwithr.wordpress.com) provide lots of walkthroughs of historically important baseball examples. 
 
-[Retrosheet](http://www.retrosheet.org/) has box-scores dating back to the 1800's, although I don't have any experience getting this information into R. 
+- [Retrosheet](http://www.retrosheet.org/) has box-scores dating back to the 1800's, although I don't have any experience getting this information into R. 
+
+- Darren at [Baseball Savant](www.baseballsavant) has some great pitch-level, searchable data. I used it for my umpire piece [here](http://fivethirtyeight.com/features/umpires-are-less-blind-than-they-used-to-be/)
 
 
 ### Football
+
+- [Armchair Analysis](www.armchairanalysis.com) has parsed play-by-play data for all NFL games since 2000, split among roughly 15 data sets. I highly recommend, but there's a subscription required (yearly or seasonally).
+
+- Brian Burke's old [site](http://archive.advancedfootballanalytics.com/2010/04/play-by-play-data.html) has unparsed play-by-play data for several seasons. It's free, but may take a bit of cleaning.
+
+- Football Outsiders' advanced metrics may be worth a [look](http://www.footballoutsiders.com/). 
+
+- Darren at [NFL Savant](http://nflsavant.com/about.php) has the last three seasons (2013 - 2015) ready for download. There's also a .csv will all combine results from 1999-2015. 
+
+
+
 
 
