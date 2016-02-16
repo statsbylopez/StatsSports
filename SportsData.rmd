@@ -12,7 +12,7 @@ I usually recommend the sports-reference sites ([find several here](http://www.s
 
 - The [Lahman](https://cran.r-project.org/web/packages/Lahman/Lahman.pdf) package in R is a great resource for historical statistics. There are 24 data sets with team, individual, manager, all-star, and hall-of-fame information in them. For more info, see this [link](http://lahman.r-forge.r-project.org/). (**Rstats**)
 
-- If you don't use R, you can access the raw data [here](http://www.seanlahman.com/baseball-archive/statistics/).
+- If you don't use R, you can access the raw data from Lahman's site [here](http://www.seanlahman.com/baseball-archive/statistics/).
 
 - The [PitchFX](http://cpsievert.github.io/pitchRx/) package contains location data for MLB pitches from roughly the past decade. (**Rstats**)
 
