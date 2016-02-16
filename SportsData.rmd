@@ -37,7 +37,7 @@ I usually recommend the sports-reference sites ([find several here](http://www.s
 
 - Football Outsiders' advanced metrics may be worth a [look](http://www.footballoutsiders.com/). 
 
-- Darren at [NFL Savant](http://nflsavant.com/about.php) has the last three seasons (2013 - 2015) ready for download. There's also a .csv will all combine results from 1999-2015. 
+- Darren at [NFL Savant](http://nflsavant.com/about.php) has the last three seasons (2013 - 2015) ready for download. There's also a .csv with the results of the NFL's combine from 1999-2015. 
 
 - I've used Sunshine's [data](http://www.repole.com/sun4cast/data.html) to get spread information for NFL and NCAA games. 
 
