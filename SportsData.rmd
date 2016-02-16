@@ -14,7 +14,7 @@ I usually recommend the sports-reference sites ([find several here](http://www.s
 
 - If you don't use R, you can access the raw data from Lahman's site [here](http://www.seanlahman.com/baseball-archive/statistics/).
 
-- The [PitchFX](http://cpsievert.github.io/pitchRx/) package contains location data for MLB pitches from roughly the past decade. (**Rstats**)
+- Carson's [PitchFX](http://cpsievert.github.io/pitchRx/) package contains location data for MLB pitches from roughly the past decade. (**Rstats**). There's also a more [technical](https://journal.r-project.org/archive/2014-1/sievert.pdf) primer. 
 
 - Dan Brooks' [site](http://www.brooksbaseball.net/) also has valuable XY data, produced almost instantanously. 
 
