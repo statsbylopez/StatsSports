@@ -20,11 +20,13 @@ I usually recommend the sports-reference sites ([find several here](http://www.s
 
 - Bill Petti is working on a baseball package in R that is promising. See his github page [here](https://github.com/BillPetti/baseballr). The focus is on the more recent baseball methodology. (**Rstats**)
 
-- The [BaseballwithR book](http://www.amazon.com/Analyzing-Baseball-Data-Chapman-Series/dp/1466570229) and [webpage](https://baseballwithr.wordpress.com) provide lots of walkthroughs of historically important baseball examples. 
+- Jim & Max's [BaseballwithR book](http://www.amazon.com/Analyzing-Baseball-Data-Chapman-Series/dp/1466570229) and [webpage](https://baseballwithr.wordpress.com) provide lots of walkthroughs of historically important baseball examples. 
 
 - [Retrosheet](http://www.retrosheet.org/) has box-scores dating back to the 1800's, although I don't have any experience getting this information into R. 
 
 - Darren at [Baseball Savant](www.baseballsavant) has some great pitch-level, searchable data. I used it for my umpire piece [here](http://fivethirtyeight.com/features/umpires-are-less-blind-than-they-used-to-be/)
+
+- Ben, Greg, and Shane wrote a statistical paper on [wins above replacement](http://arxiv.org/abs/1312.7158), and their R [package](https://github.com/beanumber/openWAR) and [tutorial](https://baseballwithr.wordpress.com/2014/03/17/introduction-to-openwar/) are worth a read, particularly among those ready for more advanced analyses. Jim Albert's [tutorials](https://baseballwithr.wordpress.com/category/openwar/) will help you along. 
 
 
 ### Football
