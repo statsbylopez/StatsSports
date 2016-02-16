@@ -1,6 +1,7 @@
 ## Sports Data
 
-There are a wide variety of public data sets or R packages available for anyone looking to do statistics and sports research. This working list is designed to provide teachers, professionals, and students one guide to what's out there. I'll be adding items throughout my semester of teaching [Sports and Stats](statsbylopez.com/stats-sports-class/), so feel free to check back. Also, this list is meant to provide raw data, either cleaned or uncleaned, and so I won't be linking to site's that have focused more on the analysis piece.
+There are a wide variety of public data sets or R packages available for anyone looking to do statistics and sports research. This working list is designed to provide teachers, professionals, and students one guide to what's out there. I'll be adding items throughout my semester of teaching [Sports and Stats](statsbylopez.com/stats-sports-class/), so feel free to check back. Also, this list is meant to provide raw data, either cleaned or uncleaned, and so I won't be linking to site's that have focused more on the analysis piece. Sites with an (**Rstats**) are tutorials or packages designed fort the `R` statistical software ([here](cran.r-project.org)). 
+
 
 ### All sports
 
@@ -9,11 +10,15 @@ I usually recommend the sports-reference sites ([find several here](http://www.s
 
 ### Baseball
 
-- The [Lahman](https://cran.r-project.org/web/packages/Lahman/Lahman.pdf) package in R is a great resource for historical statistics. There are 24 data sets with team, individual, manager, all-star, and hall-of-fame information in them. For more info, see this [link](http://lahman.r-forge.r-project.org/). If you don't use R, you can access the raw data [here](http://www.seanlahman.com/baseball-archive/statistics/).
+- The [Lahman](https://cran.r-project.org/web/packages/Lahman/Lahman.pdf) package in R is a great resource for historical statistics. There are 24 data sets with team, individual, manager, all-star, and hall-of-fame information in them. For more info, see this [link](http://lahman.r-forge.r-project.org/). (**Rstats**)
 
-- The [PitchFX](http://cpsievert.github.io/pitchRx/) contains location data for MLB pitches from roughly the past decade. Dan Brooks' [site](http://www.brooksbaseball.net/) also has valuable XY data, produced almost instantanously. 
+- If you don't use R, you can access the raw data [here](http://www.seanlahman.com/baseball-archive/statistics/).
 
-- Bill Petti is working on a baseball package in R that is promising. See his github page [here](https://github.com/BillPetti/baseballr). The focus is on the more recent baseball methodology. 
+- The [PitchFX](http://cpsievert.github.io/pitchRx/) package contains location data for MLB pitches from roughly the past decade. (**Rstats**)
+
+- Dan Brooks' [site](http://www.brooksbaseball.net/) also has valuable XY data, produced almost instantanously. 
+
+- Bill Petti is working on a baseball package in R that is promising. See his github page [here](https://github.com/BillPetti/baseballr). The focus is on the more recent baseball methodology. (**Rstats**)
 
 - The [BaseballwithR book](http://www.amazon.com/Analyzing-Baseball-Data-Chapman-Series/dp/1466570229) and [webpage](https://baseballwithr.wordpress.com) provide lots of walkthroughs of historically important baseball examples. 
 
