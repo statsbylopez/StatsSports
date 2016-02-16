@@ -23,7 +23,7 @@ For this homework, we will be using data provided in the `Lahman` package.
 
 Our first goal is to use variables in the `Teams` data set to identify the model that best fits the number of runs scored for a team in a single season. We'll use all seasons since 1970. Several models are proposed. 
 
-```{r, eval = FALSE}
+```{r}
 Teams.1 <- filter(Teams, yearID >=1970)
 Teams.1 <- mutate(Teams.1, X1B = H - X2B - X3B - HR)
 
@@ -41,7 +41,7 @@ Note: The `options(scipen = 999)` command disables R's scientific notation.
 
 ## Question 1
 
-Using the AIC criteria, which of the six models would you recommend for measuring runs against on a team-wide level?  From a baseball perspective, what does your choice suggest about certain measurements as far as their link to runs scored?
+Using the AIC criteria, which of the six models would you recommend for measuring runs scored on a team-wide level?  From a baseball perspective, what does your choice suggest about certain measurements as far as their link to runs scored?
 
 
 ## Question 2
@@ -72,7 +72,7 @@ The first team in the data set is the Atlanta Braves, who scored 736 runs in 197
 
 In this part, we'll use the `Hitting` data set, and explore the properties of runs created. In this code, we look at three formulas for runs created: `RC1`, `RC2`, and `RC3`. 
 
-```{r, eval = FALSE}
+```{r}
 Batting.1 <- Batting %>% 
  filter(yearID >=1971, AB > 500) %>%
  mutate(X1B = H - X2B - X3B - HR, 
