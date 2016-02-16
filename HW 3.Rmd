@@ -113,7 +113,7 @@ Make a pair of scatter plots: `f.RC1` versus `RC1`, and `f.RC3` versus `RC3`. Is
 
 In place of correlation, a useful tool for measuring predictive accuracy is root mean squared error (MAE). In R, the MAE between two variables of the same length can be calculated as follows:
 
-```{r, eval = FALSE}
+```{r}
 x <- c(6, 10, 10)
 y <- c(10, 10, 8)
 MAE <- mean(abs(x-y))
