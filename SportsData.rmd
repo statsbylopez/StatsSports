@@ -41,6 +41,8 @@ I usually recommend the sports-reference sites ([find several here](http://www.s
 
 - I've used Sunshine's [data](http://www.repole.com/sun4cast/data.html) to get spread information for NFL and NCAA games. 
 
+- For those more comfortable with Python, Ben [scrapes](https://github.com/burntSushi/nfldb) game, player, and play information for games since 2009.
+
 
 
 
