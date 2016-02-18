@@ -19,7 +19,7 @@ nfl.kick <- read.csv(text = url)
 
 For this homework, we will be using data provided in the `nfl.kick` data set, as was done during class. Our goals will be to confirm our knowledge of logistic regression, our interpretations of slopes, as well as kicker-specific analysis. 
 
-## Part I: Exploratory data analysis
+## Exploratory data analysis
 
 
 1. Use R to find the **kicker** with the best percentage of successful field goals. Why might one argue that this specific kicker may not be the most accurate, even though he has the highest percentage?
@@ -32,7 +32,7 @@ For this homework, we will be using data provided in the `nfl.kick` data set, as
 
 
 
-## Part II: Logistic regression
+## Logistic regression
 
 
 4. There are several variables in this data set. Using the AIC criteria, identify the logistic regression model that is the best fit for our `Success` outcome. 
@@ -55,7 +55,7 @@ summary(fit.3)
 
 
 
-## Part III: Expected points
+## Expected points
 
 
 8. Use your answer to Question (7) to estimate the expected points of a 40-yard field goal, kicked on a non-grass surface in 2015. 
@@ -65,6 +65,7 @@ summary(fit.3)
 
 
 10. It is straightforward to estimate the value of kickers using expected points. 
+
 
 
 First, we generate predicted probabilities for each field goal using `fit.3`. Next, we use that to estimate the expected points for each field goal (`predict.points`). Finally, we use the result of the field goal (`Success` = 0 or a 1) and the value of the kick (3 points) to get an expected points added (`EPA`) for each kicker on each kick. 
@@ -80,6 +81,7 @@ The first row corresponds to a David Akers kick in 2005. What was the predicted 
 
 11. One metric we may be interested in is the relative worth, in terms of total `EPA`, among all kickers in our data set. The `dplyr` function makes it simple.
 
+
 ```{r, eval = FALSE}
 options(dplyr.print_max = 1e9)
 kick.summary <- nfl.kick %>%
@@ -91,7 +93,7 @@ kick.summary
 
 The above function calculates kicker-specific percentages, each kicker's total number of kicks, and each kickers total EPA. 
 
-Since 2005, who has been worth the most (and least) total `EPA` to their teams?
+11. Since 2005, who has been worth the most (and least) total `EPA` to their teams?
 
 
 
