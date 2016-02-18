@@ -22,30 +22,46 @@ For this homework, we will be using data provided in the `nfl.kick` data set, as
 ## Exploratory data analysis
 
 
-1. Use R to find the **kicker** with the best percentage of successful field goals. Why might one argue that this specific kicker may not be the most accurate, even though he has the highest percentage?
+### Question 1
+
+Use R to find the **kicker** with the best percentage of successful field goals. Why might one argue that this specific kicker may not be the most accurate, even though he has the highest percentage?
 
 
-2. Use R to find the **team** with the best percentage of successful field goals. Why might one argue that this team may not have had the best kickers even though they've posted the highest overall percentage?
+### Question 2
+
+Use R to find the **team** with the best percentage of successful field goals. Why might one argue that this team may not have had the best kickers even though they've posted the highest overall percentage?
 
 
-3. Identify the teams that have kicked the highest percentage of their field goals on grass (recall: the `Grass` variable is a TRUE/FALSE indicator for whether or not each kick was kicked on a grass surface.).
+### Question 3
+
+Identify the teams that have kicked the highest percentage of their field goals on grass (recall: the `Grass` variable is a TRUE/FALSE indicator for whether or not each kick was kicked on a grass surface.).
 
 
 
 ## Logistic regression
 
 
-4. There are several variables in this data set. Using the AIC criteria, identify the logistic regression model that is the best fit for our `Success` outcome. 
+### Question 4
+
+There are several variables in this data set. Using the AIC criteria, identify the logistic regression model that is the best fit for our `Success` outcome. 
 
 
-5. Using your model from (4), interpret the coefficient for `Distance` as an odds ratio.
+### Question 5
+
+Using your model from (4), interpret the coefficient for `Distance` as an odds ratio.
 
 
-6. Odds ratios are multiplicative. That is, if the odds of a successful outcome are $e^{\beta_1}$ given a one-unit increase in $x_1$, the odds of a successful outcome are $e^{c*\beta_1}$ given a $c$-unit increase in $x_1$. Given your model in (4) what are the odds of making a field goal that is 10 yards longer?
+### Question 6
+
+
+Odds ratios are multiplicative. That is, if the odds of a successful outcome are $e^{\beta_1}$ given a one-unit increase in $x_1$, the odds of a successful outcome are $e^{c*\beta_1}$ given a $c$-unit increase in $x_1$. Given your model in (4) what are the odds of making a field goal that is 10 yards longer?
 
 
 
-7. Using the model below, estimate the probability of a successful 40-yard field goal, kicked on a non-grass surface in 2015. 
+### Question 7
+
+
+Using the model below, estimate the probability of a successful 40-yard field goal, kicked on a non-grass surface in 2015. 
 
 
 ```{r, eval = FALSE}
@@ -58,13 +74,22 @@ summary(fit.3)
 ## Expected points
 
 
-8. Use your answer to Question (7) to estimate the expected points of a 40-yard field goal, kicked on a non-grass surface in 2015. 
+### Question 8
 
 
-9. Kicker A hits the field goal in Question (8) while Kicker B misses it. How many expected points has Kicker A added to his team given this single kick? How about Kicker B?
+Use your answer to Question (7) to estimate the expected points of a 40-yard field goal, kicked on a non-grass surface in 2015. 
 
 
-10. It is straightforward to estimate the value of kickers using expected points. 
+### Question 9
+
+
+Kicker A hits the field goal in Question (8) while Kicker B misses it. How many expected points has Kicker A added to his team given this single kick? How about Kicker B?
+
+
+### Question 10
+
+
+It is straightforward to estimate the value of kickers using expected points. 
 
 
 
@@ -79,7 +104,9 @@ nfl.kick <- mutate(nfl.kick, predict.Success = predict(fit.3, nfl.kick, type = "
 The first row corresponds to a David Akers kick in 2005. What was the predicted success rate for Akers on this kick?  What relative worth (in terms of `EPA`) did Akers provide on this kick?
 
 
-11. One metric we may be interested in is the relative worth, in terms of total `EPA`, among all kickers in our data set. The `dplyr` function makes it simple.
+### Question 11
+
+One metric we may be interested in is the relative worth, in terms of total `EPA`, among all kickers in our data set. The `dplyr` function makes it simple.
 
 
 ```{r, eval = FALSE}
@@ -93,11 +120,13 @@ kick.summary
 
 The above function calculates kicker-specific percentages, each kicker's total number of kicks, and each kickers total EPA. 
 
-11. Since 2005, who has been worth the most (and least) total `EPA` to their teams?
+Since 2005, who has been worth the most (and least) total `EPA` to their teams?
 
 
 
-12. Interpret the R-squared calculated below. What does it suggest about the fraction of unexplained variability when it comes to kicker EPA?
+### Question 12
+
+Interpret the R-squared calculated below. What does it suggest about the fraction of unexplained variability when it comes to kicker EPA?
 
 ```{r, eval = FALSE}
 xyplot(total.EPA ~ percent.success, data = filter(kick.summary, total.kicks >=50 ))
@@ -105,6 +134,8 @@ cor(total.EPA ~ percent.success, data = filter(kick.summary, total.kicks >=50 ))
 ```
 
 
-13. Given your readings, are there any other variables that you would want to account for when measuring field goal success that aren't in the current data set? How may it effect the ranking of kickers in Question Question (12)? 
+### Question 13
+
+Given your readings, are there any other variables that you would want to account for when measuring field goal success that aren't in the current data set? How may it effect the ranking of kickers in Question Question (12)? 
 
 
