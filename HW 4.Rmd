@@ -21,6 +21,7 @@ For this homework, we will be using data provided in the `nfl.kick` data set, as
 
 ## Part I: Exploratory data analysis
 
+
 1. Use R to find the **kicker** with the best percentage of successful field goals. Why might one argue that this specific kicker may not be the most accurate, even though he has the highest percentage?
 
 
@@ -33,6 +34,7 @@ For this homework, we will be using data provided in the `nfl.kick` data set, as
 
 ## Part II: Logistic regression
 
+
 4. There are several variables in this data set. Using the AIC criteria, identify the logistic regression model that is the best fit for our `Success` outcome. 
 
 
@@ -41,7 +43,10 @@ For this homework, we will be using data provided in the `nfl.kick` data set, as
 
 6. Odds ratios are multiplicative. That is, if the odds of a successful outcome are $e^{\beta_1}$ given a one-unit increase in $x_1$, the odds of a successful outcome are $e^{c*\beta_1}$ given a $c$-unit increase in $x_1$. Given your model in (4) what are the odds of making a field goal that is 10 yards longer?
 
+
+
 7. Using the model below, estimate the probability of a successful 40-yard field goal, kicked on a non-grass surface in 2015. 
+
 
 ```{r, eval = FALSE}
 fit.3 <- glm(Success ~ Distance + Grass + Year, data = nfl.kick, family ="binomial")
@@ -52,11 +57,15 @@ summary(fit.3)
 
 ## Part III: Expected points
 
+
 8. Use your answer to Question (7) to estimate the expected points of a 40-yard field goal, kicked on a non-grass surface in 2015. 
+
 
 9. Kicker A hits the field goal in Question (8) while Kicker B misses it. How many expected points has Kicker A added to his team given this single kick? How about Kicker B?
 
+
 10. It is straightforward to estimate the value of kickers using expected points. 
+
 
 First, we generate predicted probabilities for each field goal using `fit.3`. Next, we use that to estimate the expected points for each field goal (`predict.points`). Finally, we use the result of the field goal (`Success` = 0 or a 1) and the value of the kick (3 points) to get an expected points added (`EPA`) for each kicker on each kick. 
 
