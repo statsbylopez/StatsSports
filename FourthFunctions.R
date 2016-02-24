@@ -1,5 +1,6 @@
 
 
+
 Sample.punt <- function(yards.from.own.goal){
   data.punt <- filter(punt, yfog <= yards.from.own.goal + 5, 
                       yfog >= yards.from.own.goal - 5, pnet >=0)
@@ -45,8 +46,12 @@ Sample.RP <- function(down, yards.to.go, yards.from.own.goal) {
     else {sim.RP.paste <- paste("You called a", sim.RP$type, "which gained", 
                         sim.RP$yds, "yard(s) and failed to pick up a first down.")}
     sim.RP.paste.pts<-""
-  if (sim.RP$pts < -3) {sim.RP.paste.pts <- "Oh no! You gave up a touchdown (-7 pts)"}
-  if (sim.RP$pts == -2) {sim.RP.paste.pts <- "Oh no! You gave up a safety (-2 pts)"}
-  if (sim.RP$pts > 0) {sim.RP.paste.pts <- "Bam! You scored a touchdown (7 pts)"}
+  if (sim.RP$pts < -3) {sim.RP.paste.pts <- "The offensive team gave up a defensive touchdown (-7 pts)"}
+  if (sim.RP$pts == -2) {sim.RP.paste.pts <- "The offensive team gave up a safety (-2 pts)"}
+  if (sim.RP$pts > 0) {sim.RP.paste.pts <- "The offensive team scored a touchdown (7 pts)"}
   print(paste(sim.RP.paste, sim.RP.paste.pts))
+  if (sim.RP$TO == "TRUE"){
+    print(paste("The offensive team turned the ball over. The defense takes over with the ball",
+                             100-(sim.RP$yfog+sim.RP$yds), "yards from its own end zone"))
+    }
   }
