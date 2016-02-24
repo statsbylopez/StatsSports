@@ -10,7 +10,7 @@ knitr::opts_chunk$set(fig.width=6, fig.height=3.6, warning=FALSE,
 message=FALSE)
 ```
 
-```{r, eval = FALSE}
+```{r, message = FALSE, warning = FALSE}
 library(mosaic)
 library(RCurl)
 url <- getURL("https://raw.githubusercontent.com/statsbylopez/StatsSports/master/Kickers.csv")
