@@ -1,0 +1,103 @@
+---
+title: "Homework 7"
+output:
+  pdf_document: default
+  html_document:
+    css: ../lab.css
+    highlight: pygments
+    theme: cerulean
+author: MA 276, Skidmore College
+---
+
+## Overview
+
+In this lab, we'll practice implementing logistic regression to estimate the probability of successful NBA shots. We'll also link to shot-level probabilities and expected points. Before we do anything, we have to load and clean the data, as in Lab 6. 
+
+```{r, eval = FALSE}
+library(RCurl)
+library(mosaic)
+url <- getURL("https://raw.githubusercontent.com/JunWorks/NBAstat/master/shot.csv")
+nba.shot <- read.csv(text = url)
+nba.shot <- na.omit(nba.shot)
+nba.shot <- filter(nba.shot, PTS <4, SHOT_DIST>=22 |PTS_TYPE==2)
+nrow(nba.shot)
+```
+
+
+
+\section{Expected points}
+
+All else being equal, what's the most efficient shot in the NBA?
+
+In our lab, we characterized by points type using the following code:
+
+```{r, eval = FALSE}
+tally(SHOT_RESULT ~ PTS_TYPE, data = nba.shot, format = "proportion")
+```
+
+Of course, all two-point shots are not created equal. Using the cut command, we split two-pointers by distance into different groups, labeled `D1` to `D8`, in order from shortest to longest and grouped by shot type (2 or 3 points). The two data sets, `nba.two` and `nba.three` contain the two and three-pointers, respectively.
+
+```{r, eval  = FALSE}
+nba.two <- nba.shot %>%
+  filter(PTS_TYPE == 2) %>%
+  mutate(dist.cat = cut(SHOT_DIST, breaks = c(-100, 3, 6, 12, 100), 
+                        labels = c("D1", "D2", "D3", "D4")))
+  
+nba.three <- nba.shot %>%
+  filter(PTS_TYPE == 3) %>%
+  mutate(dist.cat = cut(SHOT_DIST, breaks = c(0, 23, 25, 100), 
+                        labels = c("D6", "D7", "D8")))  
+
+
+tally(SHOT_RESULT ~ dist.cat, data = nba.two, format = "proportion")
+tally(SHOT_RESULT ~ dist.cat, data = nba.three, format = "proportion")
+```
+
+### Question 1
+
+In order from best (highest expected points) to worst (lowest), order the categories D1 to D8.
+
+
+### Question 2
+
+Using code from our last lab, identify of expected points are higher on two or three point shots taken by Rajon Rondo. 
+
+
+### Question 3
+
+Here's are two models of shot success (note that we re-bind all of the shots together).
+
+```{r, eval = FALSE}
+nba.shot2 <- rbind(nba.two, nba.three)
+
+fit.1 <- glm(SHOT_RESULT == "made" ~ SHOT_DIST + TOUCH_TIME + 
+            DRIBBLES + SHOT_CLOCK + CLOSE_DEF_DIST, 
+             data = nba.shot2, family = "binomial")
+
+fit.2 <- glm(SHOT_RESULT == "made" ~ dist.cat + TOUCH_TIME + 
+            DRIBBLES + SHOT_CLOCK + CLOSE_DEF_DIST, 
+             data = nba.shot2, family = "binomial")
+
+```
+
+Using the AIC criteria, which is the preferred fit of shot success? Is it close? 
+
+
+### Question 4
+
+Using `fit.2`, estimate the increased odds of a made shot given a one-unit increase in closest defender distance. Then, estimate the increased odds of a made shot given a ten-unit increase in closest defender distance.
+
+
+### Question 5
+
+Add game location (`LOCATION`) to `fit.2`. Does this improve the fit? Is the coefficient for this term statistically and/or practically significant?  What does that suggest? 
+
+
+### Question 6
+
+Does it make sense to add if the shooter's team was victorious (variable `W`) or margin of victory (`FINAL_MARGIN`) to the model? Why or why not? You do not need to run any code to answer this. 
+
+
+### Question 7
+
+Using Seth's article [here](https://sports.vice.com/en_us/article/moreyball-goodharts-law-and-the-limits-of-analytics) and referencing the charts shown, explain Goodhart's law as it applies to statistics in the NBA. 
