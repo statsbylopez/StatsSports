@@ -54,7 +54,7 @@ tally(SHOT_RESULT ~ dist.cat, data = nba.three, format = "proportion")
 
 ### Question 1
 
-In order from best (highest expected points) to worst (lowest), order the categories D1 to D8.
+In order from best (highest expected points) to worst (lowest), order the categories D1 to D7.
 
 
 ### Question 2
