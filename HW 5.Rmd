@@ -34,7 +34,7 @@ In our lab, we characterized by points type using the following code:
 tally(SHOT_RESULT ~ PTS_TYPE, data = nba.shot, format = "proportion")
 ```
 
-Of course, all two-point shots are not created equal. Using the cut command, we split two-pointers by distance into different groups, labeled `D1` to `D8`, in order from shortest to longest and grouped by shot type (2 or 3 points). The two data sets, `nba.two` and `nba.three` contain the two and three-pointers, respectively.
+Of course, all two-point shots are not created equal. Using the cut command, we split two-pointers by distance into different groups, labeled `D1` to `D7`, in order from shortest to longest and grouped by shot type (2 or 3 points). The two data sets, `nba.two` and `nba.three` contain the two and three-pointers, respectively.
 
 ```{r, eval  = FALSE}
 nba.two <- nba.shot %>%
@@ -45,7 +45,7 @@ nba.two <- nba.shot %>%
 nba.three <- nba.shot %>%
   filter(PTS_TYPE == 3) %>%
   mutate(dist.cat = cut(SHOT_DIST, breaks = c(0, 23, 25, 100), 
-                        labels = c("D6", "D7", "D8")))  
+                        labels = c("D5", "D6", "D7")))  
 
 
 tally(SHOT_RESULT ~ dist.cat, data = nba.two, format = "proportion")
