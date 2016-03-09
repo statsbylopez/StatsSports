@@ -24,8 +24,7 @@ nrow(nba.shot)
 ```
 
 
-
-\section{Expected points}
+## Expected Points
 
 All else being equal, what's the most efficient shot in the NBA?
 
