@@ -48,11 +48,7 @@ I usually recommend the sports-reference sites ([find several here](http://www.s
 
 I'm looking for a public data set will shot-level information across several years. In the meantime, what's provided is mostly walk-through's of how one can scrape game, team, and player-level data. 
 
-- [The Data Game](http://thedatagame.com.au/2015/09/27/how-to-create-nba-shot-charts-in-r/) provides a tutorial on making a shot chart using R and ggplot. (**Rstats**)
-
-- [Alex Bresler](http://asbcllc.com/blog/2014/november/creating_bref_scraper/) provides an entertaining walk-through of using R to scrape basketball reference. (**RStats**)
-
-- [Nathan Yao](https://flowingdata.com/2010/01/21/how-to-make-a-heatmap-a-quick-and-easy-solution/)'s heatmap of NBA player stats is easy to implement. (**RStats**)
+- [The Data Game](http://thedatagame.com.au/2015/09/27/how-to-create-nba-shot-charts-in-r/) provides a tutorial on making a shot chart using R and ggplot. [Alex Bresler](http://asbcllc.com/blog/2014/november/creating_bref_scraper/) provides an entertaining walk-through of using R to scrape basketball reference. [Nathan Yao](https://flowingdata.com/2010/01/21/how-to-make-a-heatmap-a-quick-and-easy-solution/)'s heatmap of NBA player stats is easy to implement. [Rajiv](https://github.com/rajshah4/NBA_SportVu) has a set of Markdown files showing how to explore the NBA's SportVu motion data. (**RStats**)
 
 - Darren at [NBA Savant](http://nbasavant.com/shot_search.php) has a shot search tool, as well as the data from the NBA's two-minute report, which show [questionable calls](nbasavant.com/apps/twoMinuteReport.php) in the final minutes of close games. 
 
@@ -62,6 +58,8 @@ I'm looking for a public data set will shot-level information across several yea
 
 - [Alex](https://github.com/abresler/nbastatR) wrote an R package that links to several different basketball sites, while [Ryan](https://github.com/rtelmore/ballr) also has one in the works which can scrape standings and stats directly. (**Rstats**)
 
-- For those more comfortable with Python, Daniel [scrapes](http://danielfrg.com/blog/2013/04/01/nba-scraping-data/) games and player stats, and Greg [digs into](http://www.gregreda.com/2015/02/15/web-scraping-finding-the-api/) the league's API
+- Those looking a selection of SportVU game logs directly can access it on Neil's [Github](https://github.com/neilmj/BasketballData/tree/master/2016.NBA.Raw.SportVU.Game.Logs)
+
+- For those more comfortable with Python, Daniel [scrapes](http://danielfrg.com/blog/2013/04/01/nba-scraping-data/) games and player stats, and Greg [digs into](http://www.gregreda.com/2015/02/15/web-scraping-finding-the-api/) the league's API. Additionally, tutorials from [Savvas](http://savvastjortjoglou.com/tag/python.html) stand alone. 
 
 
