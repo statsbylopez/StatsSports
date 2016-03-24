@@ -60,6 +60,15 @@ I'm looking for a public data set will shot-level information across several yea
 
 - Those looking a selection of SportVU game logs directly can access it on Neil's [Github](https://github.com/neilmj/BasketballData/tree/master/2016.NBA.Raw.SportVU.Game.Logs)
 
-- For those more comfortable with Python, Daniel [scrapes](http://danielfrg.com/blog/2013/04/01/nba-scraping-data/) games and player stats, and Greg [digs into](http://www.gregreda.com/2015/02/15/web-scraping-finding-the-api/) the league's API. Additionally, tutorials from [Savvas](http://savvastjortjoglou.com/tag/python.html) stand alone. 
+### Hockey
+
+Sam and Andrew's [War-on-ice](war-on-ice) site has a little bit of everything for hockey fans, and I draw all of my data from their tables. 
+
+Additionally, their [nhlscrapr](cran.r-project.org/web/packages/nhlscrapr/nhlscrapr.pdf) can be used to extract play-level data. (**Rstats**).
+
+I wrote about how to scrape [Hockey Reference](http://statsbylopez.com/2014/11/21/nhl-game-outcomes-using-r-and-hockey-reference/) using **Rstats**.
+
+
+
 
 
