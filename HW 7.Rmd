@@ -55,7 +55,7 @@ The data set `nhl.data1` contains the the players' production in the season foll
 
 ## Project
 
-6. Write a three paragraph description of your project. 
+Write a three paragraph description of your project. 
 
 Your first paragraph should motivate the question that you are going to research. Why is it interesting? Why should the class think it is interesting? You can use personal experience if it applies (ex: I play cricket, and our coach has always wondered if **X** is associated with **Y**) or existing research (ex: I saw this, and I think I can implement it in R and take it one step further) that you link to. Y
 
