@@ -1,0 +1,68 @@
+---
+title: "HW 7"
+author: "Your name here"
+output: pdf_document
+---
+
+```{r knitr_options , include=FALSE}
+#Here's some preamble, which makes ensures your figures aren't too big
+knitr::opts_chunk$set(fig.width=6, fig.height=3.6, warning=FALSE,
+message=FALSE)
+```
+
+## Introduction
+
+In this assignment, we'll return to our hockey data set. Specifically, we'll use the cleaned file which contains variables regarding how each player did in the season *following* the one listed in each row. Here's that code combined into a newer frame, `nhl.data1`. 
+
+
+```{r, eval = FALSE}
+library(RCurl)
+library(mosaic)
+url <- getURL("https://raw.githubusercontent.com/statsbylopez/StatsSports/master/NHL.csv")
+nhl.data <- read.csv(text = url)
+nhl.data <- filter(nhl.data, TOI > 500, Position!="D", Position!="DL", Position!="DR")
+nrow(nhl.data)
+nhl.data <- na.omit(nhl.data)
+nhl.data <- mutate(nhl.data, Shots_Sixty = Shots/TOI*60)
+nhl.data1 <- nhl.data %>%
+  arrange(Name, Season) %>%
+  group_by(Name) %>%
+  mutate(f.Goals = lead(Goals), 
+         f.Assists = lead(Goals), 
+         f.PDO = lead(PDO),
+         f.CFRel_Percent = lead(CFRel_Percent),
+         f.CF_Percent = lead(CF_Percent),
+         Sh_Percent = Goals/Shots, 
+         f.Sh_Percent = lead(Sh_Percent), 
+         f.PDO = lead(PDO)) 
+head(nhl.data1)
+```
+
+The data set `nhl.data1` contains the the players' production in the season following (abbreviated with an `f.`). 
+
+## Links to future goals scored
+
+1. A hockey coach is thinking about predicting a player's future goals using a regression model. Use evidence from our most recent lab to convince him it may be preferred to predict a players future relative Corsi percentage (`f.CFRel_Percent`). 
+
+2. There's an additional benefit to using `f.CFRel_Percent` as an outcome, (instead of `f.Goals`). Using univariate statistics (histograms, etc), identify why this is. 
+
+3. Using the AIC criterion and the explanatory variables `Goals`, `Assists`, `CF_Percent`, `PDO`, `CFRel_Percent`, `Shots`, `Salary`, and `Age`, derive which linear regression fit is optimal with the `f.CFRel_Percent` outcome. Reminder: it is generally not a good idea to use variables that are strongly correlated in the same regression model.
+
+4. Which variables more relevant to a player's performance in a given season? Do any of the associations surprise you? 
+
+5. Check the assumptions for the linear regression model that you chose. 
+
+
+## Project
+
+6. Write a three paragraph description of your project. 
+
+Your first paragraph should motivate the question that you are going to research. Why is it interesting? Why should the class think it is interesting? You can use personal experience if it applies (ex: I play cricket, and our coach has always wondered if **X** is associated with **Y**) or existing research (ex: I saw this, and I think I can implement it in R and take it one step further) that you link to. Y
+
+our second paragraph should describe your data (and link to any sites that you are going to use). What are the units (rows) of observation? What are your outcome(s)? What are your predictor(s)? 
+
+In the third paragraph, describe what statistical tools that you are planning on using. You don't have to go into detail about these tools.
+
+Only one person within each group needs to submit this part: please list the other person(s), though.  
+
+
