@@ -42,7 +42,7 @@ The data set `nhl.data1` contains the the players' production in the season foll
 
 ## Links to future goals scored
 
-1. A hockey coach is thinking about predicting a player's future goals using a regression model. Use evidence from our most recent lab to convince him it may be preferred to predict a players future relative Corsi percentage (`f.CFRel_Percent`). 
+1. A hockey coach is thinking about predicting a player's future goals using a regression model. Use evidence from our most recent lab to convince him it may be preferred to predict a players future relative Corsi percentage (`f.CFRel_Percent`). Note: you don't have to include code here. 
 
 2. There's an additional benefit to using `f.CFRel_Percent` as an outcome, (instead of `f.Goals`). Using univariate statistics (histograms, etc), identify why this is. 
 
