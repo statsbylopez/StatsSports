@@ -1,0 +1,78 @@
+---
+title: "HW 8"
+author: "Your name here"
+output: pdf_document
+---
+
+```{r knitr_options , include=FALSE}
+#Here's some preamble, which makes ensures your figures aren't too big
+knitr::opts_chunk$set(fig.width=6, fig.height=3.6, warning=FALSE,
+message=FALSE, eval = FALSE)
+```
+
+## Introduction
+
+In this assignment, we'll return to Stein's Paradox, except this time through the lens of batting averages and on base percentages in baseball. Recall, batting average is a batters hits divided by at bats, and on base percentage is the frequency of times a batter reached base divided by at bats. 
+
+The `Batting` data set contains player-season information for each hitter since 1971. For obtaining a James-Stein estimator, it doesn't make sense to compare players across several different era's, so we'll focus more on recent players. We also create new variables for batting average (`BA`) and on base percentage (`OBP`).
+
+```{r}
+library(mosaic)
+library(Lahman)
+library(corrplot)
+data(Batting)
+Batting.1 <- Batting %>%
+  filter(yearID >= 2000) %>%
+  mutate(BA = H/AB, OBP = (H+BB+HBP)/AB) %>%
+  na.omit()
+head(Batting.1)
+```
+
+Let's go back to the year 2007 and identify players that had roughly 450 at bats. 
+
+```{r}
+first.players <- filter(Batting.1, yearID == 2007, AB >=445, AB <=455)
+head(first.players)
+```
+
+There are 9 players in this data set.
+
+1. For batting average (`BA`), calculate the James-Stein estimate of the nine players career batting percentages using the `Batting.02` data as a base. A few hints can be provided below. 
+
+**Hint 1**: The estimate of the variance term comes from the binomial distribution. As in Lab 9, this can be estimated using the following code
+
+```{r}
+sigma.sq <- p.bar*(1-p.bar)/450 ##Rough approximation
+sigma.sq
+```
+
+**Hint 2**: Here's a data set that extracts players career batting averages using all years since 2002. 
+
+```{r}
+all.players <- Batting.1 %>%
+  group_by(playerID) %>%
+  filter(playerID %in% first.players$playerID, yearID >= 2002) %>%
+  summarise(BA.career = sum(H)/sum(AB), OBP.career = sum(H+AB+HBP)/sum(AB))
+```
+
+You can link the `all.players` and `first.players` data sets by using `inner_join()`: See Lab 9. 
+
+
+2. What is the relative amount of shrinkage towards the overall league average that we can expect for players' batting average? 
+
+
+3. Refer to the original Efron and Morris paper. Does this amount of shrinkage surprise you given their findings and their sample size?
+
+
+4. Compare the root mean squared error of the J-S estimate and the MLE estimate (recall, the MLE is the players original batting average). Which is more accurate?
+
+
+5. One of the players is Miguel Olivo (`playerID` = `olivomi01`), a catcher who batted 0.240 for his career. Catchers generally tend to hit worse than other position players. Explain how this may be impacting the accuracy of the J-S estimate.
+
+
+6. Let's fix a players number of at bats. Given what we know about on base percentage and batting average, for which variable do you expect a larger reversion towards the overall league-wide average? 
+
+
+7. *Extra credit*: Repeat the same analysis, except for OBP. Do your findings match your expectations from Question 6?  For OBP, is the J-S estimate more accurate than the MLE estimate?
+
+
