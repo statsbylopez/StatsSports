@@ -52,7 +52,7 @@ sigma.sq
 all.players <- Batting.1 %>%
   group_by(playerID) %>%
   filter(playerID %in% first.players$playerID, yearID >= 2002) %>%
-  summarise(BA.Career = sum(H)/sum(AB), OBP.Career = sum(H+AB+HBP)/sum(AB))
+  summarise(BA.Career = sum(H)/sum(AB), OBP.Career = sum(H+BB+HBP)/sum(AB))
 ```
 
 You can link the `all.players` and `first.players` data sets by using `inner_join()`: See Lab 9. 
