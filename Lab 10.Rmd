@@ -1,0 +1,68 @@
+---
+title: 'Lab 10: Penalties in football'
+author: "Michael Lopez, Skidmore College"
+output:
+  pdf_document: default
+  html_document:
+    css: ../lab.css
+    highlight: pygments
+    theme: cerulean
+---
+
+## Overview
+
+In this lab, we are going to work in pairs to answer interesting questions on penalties in the NFL. As you start, think back to our lessons on referee behavior. Where do you expect to find differences in NFL penalty rates? 
+
+First, the data:
+
+```{r, message = FALSE, warning = FALSE}
+library(mosaic)
+library(RCurl)
+x <- getURL("https://raw.githubusercontent.com/statsbylopez/StatsSports/master/penalties.csv")
+nfl.data <- read.csv(text = x)
+head(nfl.data)
+dim(nfl.data)
+nfl.data[6:10,]
+```
+
+On the 8th play of the game against New England (`def`), Pittsburgh (`off` and `ptm`) was called for an offensive holding (`desc`). This play occured on 2nd down and 18, with Pittsburgh 68 yards from its own goal. Note that this play is officially recorded as `NO PLAY`, and not a run or a pass.
+
+We can get a sense of what penalties were called by using `tally()`.
+
+```{r}
+tally(~desc, data = nfl.data)
+```
+
+## Tasks for today
+
+Using whatever penalty outcome(s) that you'd like, come up with both an interesting visualization (mosiac plot, histogram, scatter plot, bar plot, etc) and a logistic regression model that look at the likelihood of your outcome(s) as a function of game and/or play-specific characteristics. For example, you could look at likelihood of a penalty as it relates to the game's temperature, the minute of each play, the down and/or distance, if the guilty team was the home team, or the spot on the field where the play occurred. 
+
+Here's some code that can help. Once you've chosen your penalty outcome(s), you can create a new variable that reflects a `TRUE` if your specific penalty was called and a `FALSE` if that penalty was not called.
+
+```{r}
+nfl.data1 <- nfl.data %>%
+  mutate(DPI = (desc =="Defensive Pass Interference"),
+         DPenalty = (desc =="Face Mask")|(desc == "Horse Collar"))
+```
+
+The first variable, `DPI`, is TRUE if there was a defensive pass interference. The second variable, `DPenalty` is a TRUE if there was either a face mask or a horse collar penalty.
+
+You can check this by coding the following table, and ensuring that your outcomes line up with the penalty descriptions. 
+
+```{r, eval = FALSE}
+tally(desc ~ DPI, data = nfl.data1)
+tally(desc ~ DPenalty, data = nfl.data1)
+```
+
+One other variable that takes a bit of care in coding is the game's minute (1-60+). Here's one attempt which roughly gets it right.
+
+```{r}
+nfl.data2 <- mutate(nfl.data1, GameMin = 15*(qtr-1) + (15-min))
+histogram(~GameMin, data = nfl.data2)
+```
+
+The first play of the game is always coded as Minute 0; nearly all games end at minute 60 (other than overtime ones).
+
+Finally, when you are done, knit your file in RMarkdown and we'll share out class' work in the last fifteen minutes.
+
+Good luck - and please see me for help coding!
