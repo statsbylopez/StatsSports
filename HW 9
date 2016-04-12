@@ -1,0 +1,26 @@
+---
+title: "Homework 9"
+output:
+  pdf_document: default
+  html_document:
+    css: ../lab.css
+    highlight: pygments
+    theme: cerulean
+author: MA 276, Skidmore College
+---
+
+## Overview
+
+In this assignment, we will not be using R (but feel free to write up your assignments in Markdown, anyways!)
+
+Read the chapter from [Scorecasting](https://statsbylopez.files.wordpress.com/2016/01/scorecasting_hfa.pdf) on home field advantage in sports and answer the following questions.
+
+1. Explain how the Pitch f/x system is used by the authors to define home advantage in baseball.
+
+2. The authors make use of a natural experiment to test home field advantage in football (although they don't define it as such). Explain this phenomenon in context of their example.
+
+3. Explain why the game's context makes it difficult to judge home court advantage in basketball and home ice advantage in hockey.
+
+4. In no more than three sentences, summarize the psychological explanations the authors give for referee-based home field advantage. 
+
+5. Do you buy the authors argument that referee decision-making is the primary driver of home field advantage in sports? Why or why not?
