@@ -11,16 +11,16 @@ author: Michael Lopez, Skidmore College
 
 Note: Please submit the exam using RMarkdown. **Five** points of your exam will be awarded based on formatting and presentation. Take time to ensure that your answers are shown in R output and succinctly described. 
 
-# Part 1 (20 total pts)
+# Part 1 (16 total pts)
 
 Beginning this postseason, the National Basketball Association is going to track *hustle stats*, as explained [here](http://espn.go.com/nba/story/_/id/15203926/nba-track-hustle-stats-playoffs-first). Read the article, and answer the following questions.
 
-## Question 1 (10 pts)
+## Question 1 (8 pts)
 
 The article indicates that *trained personnel are going to count the hustle stats*. With reference to an example from our unit on referee bias, provide a 2-3 sentence explanation as to how the league's tracking of hustle statistics could go awry.
 
 
-## Question 2 (10 pts)
+## Question 2 (8 pts)
  
 Which *hustle stats* are the league going to record? Of these, identify which metric you think is (i) most repeatable (ii) most important to team success (iii) most a function of individual talent, and not team strategy. Justify your answers in one sentence each. Note that you can use the same metric more than once.
 
@@ -63,7 +63,7 @@ Interpret the coefficient for `dist.catD2` in `fit1`, using the odds ratio scale
 
 Compare the coefficients for `SHOT_CLOCK` and `late.clock` in `fit1` and `fit2`, respectively. What is each one suggesting about the chances of a two-point shot going in as a function of the shot clock? 
 
-## Question 3 (7 pts)
+## Question 3 (6 pts)
 
 For measuring the link between shot clock and success (given distance), would you prefer `fit1` or `fit2`? If you don't like either `fit1` or `fit2`, suggest an alternative model specification. *Note that you should not fit any additional models or provide any code here.*
 
