@@ -137,7 +137,7 @@ Provide the coach with the following:
 
 ### 3a (8 pts)
 
-Two sets of estimates of the players' shooting percentage for the remainder of the two seasons, the James-Stein estimate and the maximum likelihood estimate (MLE)
+Two sets of estimates of the players' save percentage for the remainder of the two seasons, the James-Stein estimate and the maximum likelihood estimate (MLE)
 
 
 ### 3b (8 pts)
