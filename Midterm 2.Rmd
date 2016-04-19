@@ -128,7 +128,7 @@ To get career percentages:
 all.players <- nhl.shots %>%
   group_by(Goalie) %>%
   filter(Goalie %in% first.players$Goalie) %>%
-  summarise(n.shots.all = length(goal), n.saves.all = n.shots.all-sum(goal), save.p.all = n.saves/n.shots)
+  summarise(n.shots.all = length(goal), n.saves.all = n.shots.all-sum(goal), save.p.all = n.saves.all/n.shots.all)
 ```
 
 You can link the `all.players` and `first.players` data sets by using `inner_join()`: See Lab 9. 
