@@ -45,8 +45,6 @@ homeBT <- BTm(Outcome,
 5. Has the home advantage in the EPL inceased, decreased, or stayed the same? Data from past seasons can be obtained by changing part of the url given above. Specifically, `1516` refers to the year, and so the web address `http://www.football-data.co.uk/mmz4281/0506/E0.csv` would access the `0506` season. Data goes back through the 1995-96 season. Review past seasons to identify if the home advantage in the EPL has increased, decreased, or if evidence is inconclusive. You do not need to review all seasons, but use at least two other seasons (feel free to look at more, too) in your resopnse. Your response should look at both (i) the fraction of games wonby the home team and (ii) the coefficient on the home advantage term in a BTM model. 
 
 
-\newpage
-
 
 # Section 2 (50 points)
 
