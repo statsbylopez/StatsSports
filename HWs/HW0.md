@@ -1,8 +1,12 @@
-# Important note 1
+---
+title: "HW0: Introduction to stats and sports"
+---
+
+## Important note 1
 
 First, open RStudio by going to [http://r.skidmore.edu/](http://r.skidmore.edu/) or by accessing on your computers. 
 
-# Important note 2
+## Important note 2
 
 Second, we'll be using R Markdown for *all* of our class labs and homeworks. 
 
@@ -10,7 +14,7 @@ R Markdown simultaneously stores your commands, executes your commands, and gene
     
 Open a new R Markdown file (File / New File / R Markdown...).  You can create a basic name -- HW0, for example -- and that'll set you up with a new file ready to go. The preferred output for HW and labs is HTML. 
 
-# Important note 3
+## Important note 3
 
 You can change the title, author, and date to be whatever you want
 
@@ -29,10 +33,10 @@ You can change the title, author, and date to be whatever you want
 6. Tell me something fun you did this summer.
 
 
-# Important note 4
+## Important note 4
 
 When you are done, click `Knit HTML` in the top row. The file should come together with your answers and a small heading.  Please print this and bring to class. If you have *any* problems, please email me as soon as possible
 
-# Important note 5
+## Important note 5
 
 When you created the RMarkdown file, there were several lines of code that followed. You can delete all of those lines.
