@@ -43,7 +43,7 @@ Batting_1 <- Batting %>%
 
 3. Make a correlation matrix - both a matrix of the variables, as well as a visualization -- using hits, doubles, triples, home runs, RBI, and strikeouts. 
 
-4. Make a scatter plot of runs batted in (RBI, the x-variable) and home runs (HR, the x-variable). Estimate and write the regression line using the `lm` command. Finally, interpret the slope and intercept of this line.
+4. Make a scatter plot of runs batted in (RBI, the y-variable) and home runs (HR, the x-variable). Estimate and write the regression line using the `lm` command. Finally, interpret the slope and intercept of this line.
 
 5. Pete Alonso -- currently with the New York Mets -- has hit 47 home runs and batted in 109 runs (as of Sept 15, 2019). Given his home runs, what is his residual? That is, how many more or fewer runs batted in has he hit than we'd expect given his home runs?
 
@@ -123,4 +123,4 @@ ggplot(data = Batting_2, aes(x = yearID, y = HR_rate)) +
   geom_smooth()
 ```
 
-14. Repeat the code in No. 13, only for HR rate. Have hitters been hitting less home runs with the increase in strikeouts?
+14. Repeat the code in No. 13, only for K rate. Have hitters been hitting less home runs with the increase in strikeouts?
