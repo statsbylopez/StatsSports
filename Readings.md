@@ -25,13 +25,19 @@ Those interested in more detailed readings in baseball:
 ## Football stats
 
 Kickers are forever* (and read footnote 5), by Morris [(link)](https://fivethirtyeight.com/features/kickers-are-forever/)
+
 Kicker haters, by Morris [(link)](https://fivethirtyeight.com/features/the-haters-are-losing-the-war-on-nfl-kickers/)
+
 It sucks to kick in the cold [(link)](https://statsbylopez.com/2016/01/08/it-sucks-to-kick-in-the-cold/)
 
 Expected Points and EPA, Burke [(link)](https://statsbylopez.files.wordpress.com/2016/01/expected-points-and-epa-advanced-football-analytics.pdf)
+
 Building an Expected Points Model [(link)](http://thespread.us/expected-points.html)
+
 Operations Research in Football (Carter & Machol, [link](https://pubsonline.informs.org/doi/pdf/10.1287/opre.19.2.541)
+
 Going for It on Fourth Down (Burke, [link](https://statsbylopez.files.wordpress.com/2016/01/advanced-football-analytics-formerly-advanced-nfl-stats_-going-for-it-on-fourth-down.pdf))
+
 Decision Theory in Football (Burke, [link](https://statsbylopez.files.wordpress.com/2016/01/advanced-football-analytics-formerly-advanced-nfl-stats_-decision-theory-in-football.pdf))
 
 ## Basketball stats
