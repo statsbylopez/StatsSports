@@ -42,6 +42,16 @@ Decision Theory in Football (Burke, [link](https://statsbylopez.files.wordpress.
 
 ## Basketball stats
 
+[Starting Point for Analyzing Basketball Statistics](https://pdfs.semanticscholar.org/5ce7/4ed63498e98e13c81b7815f757f6ba54ae06.pdf), Kubatko et al
+
+[Demystifying basketball analytics](https://fansided.com/2015/02/22/demystification-of-diy-defining-basketball-analytics-down/) by Partnow
+
+[A measure of shot quality](https://fansided.com/2015/09/28/introducing-kobe-a-measure-of-shot-quality/) by Narsu
+
+[On RPM](https://deadspin.com/just-what-the-hell-is-real-plus-minus-espns-new-nba-s-1560361469) by Wagner
+
+[Limits of Analytics](https://www.vice.com/en_us/article/jp7xb3/moreyball-goodharts-law-and-the-limits-of-analytics) by Partnow
+
 ## Hockey stats
 
 ## Soccer stats
