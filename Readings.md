@@ -84,4 +84,6 @@ Repository of all things hockey analytics: [Meta Hockey](https://metahockey.com/
 
 [Expected goals just don't add up](https://medium.com/@dannypage/expected-goals-just-don-t-add-up-they-also-multiply-1dfd9b52c7d0), via Danny Page
 
+[StatsBomb data primer](http://statsbomb.com/wp-content/uploads/2019/07/Using-StatsBomb-Data-In-R_up.pdf) 
+
 ## Team and player rankings
