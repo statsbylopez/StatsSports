@@ -82,4 +82,6 @@ Repository of all things hockey analytics: [Meta Hockey](https://metahockey.com/
 
 [Markov models for football](https://statsbomb.com/2019/02/attacking-contributions-markov-models-for-football/) via Derrick Yam
 
+[Expected goals just don't add up](https://medium.com/@dannypage/expected-goals-just-don-t-add-up-they-also-multiply-1dfd9b52c7d0), via Danny Page
+
 ## Team and player rankings
