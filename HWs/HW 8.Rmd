@@ -1,5 +1,5 @@
 ---
-title: "HW 7: NHL stats"
+title: "HW 8: NHL stats"
 author: Stats and sports class
 date: Fall 2019
 output: 
@@ -21,19 +21,6 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, eval = FALSE, digits = 3, wa
 4. Copying and pasting of code is a violation of the Skidmore honor code
 
 # Homework questions
-
-## Part I: Readings
-
-1. Read the summary model by the Evolving Wild twins: 
-
-[https://rpubs.com/evolvingwild/395136/](https://rpubs.com/evolvingwild/395136/)
-
-Describe five unique hockey features that were implemented in their model. That is, look through their code, and highlight various ways that hockey-specific knowledge changed how they approached the problem.
-
-2. Compare the three variable importance plots. Which variables were more important during even-strength play? Which were more important (relatively speaking) when a team was shorthanded or at uneven strength?
-
-
-## Part II: Implementation
 
 We can access recent shot data here:
 
