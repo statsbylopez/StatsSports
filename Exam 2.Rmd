@@ -80,7 +80,7 @@ current_shots <- first_shots %>%
   filter(n_shots_past >= 150)
 
 future_shots <- nhl_shots %>% 
-  filter(game_id > 2017020500, event_player_1 %in% first_players$event_player_1)%>%
+  filter(game_id > 2017020500, event_player_1 %in% current_shots$event_player_1)%>%
   group_by(event_player_1) %>%
   summarise(n_shots_future = n(), 
             shot_p_future = mean(event_type == "GOAL"))
